@@ -24,6 +24,8 @@ public class Applicant {
     private  String role;
     private  String gender;
     private String status;
+//    @ManyToOne
+//    private Notification notification;
 
 
 }

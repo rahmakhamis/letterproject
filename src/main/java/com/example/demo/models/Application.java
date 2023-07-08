@@ -22,6 +22,9 @@ public class Application {
     private String status;
     private String priority;
     private  String subject;
+    @ManyToOne
+    private  Applicant applicant;
+    
 
 
 }

@@ -20,5 +20,7 @@ public class Category {
     private Long id;
 
     private  String Description;
+    @ManyToOne
+    private Category category;
 
 }

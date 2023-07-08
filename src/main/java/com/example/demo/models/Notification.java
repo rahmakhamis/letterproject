@@ -18,5 +18,7 @@ public class Notification {
     private Long id;
     private String priority;
     private String type;
+    @ManyToOne
+    private Management management;
 
 }
