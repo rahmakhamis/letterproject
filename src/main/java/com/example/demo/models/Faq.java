@@ -1,7 +1,5 @@
 package com.example.demo.models;
 
-
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,19 +10,12 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "application")
-public class Application {
+@Table(name = "faq")
+public class Faq {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "application_id")
+    @Column(name ="faq_id" )
     private Long id;
-    private String type;
-    private String address;
-    private String addressee;
-    private  String subject;
-//    @ManyToOne
-//    private  Applicant applicant;
-    
-
-
+    private String question;
+    private String answer;
 }

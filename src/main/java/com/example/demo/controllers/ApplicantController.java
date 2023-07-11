@@ -9,39 +9,38 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("api/applicant")
-
 public class ApplicantController {
     @Autowired
     private ApplicantServices applicantService;
 
-    @PostMapping("/")
+    @PostMapping("/applicant")
 public Applicant addApplicant(@RequestBody Applicant s){
 
         return applicantService.addApplicant (s);
     }
 
-    @GetMapping("/")
+    @GetMapping("/applicant")
     public List<Applicant> getAll(){
         return applicantService.getAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/applicant/{id}")
     public Optional<Applicant> getById(@PathVariable Long id){
         return applicantService.findById(id);
 
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/applicant/{id}")
     public  Applicant updateApplicant(@RequestBody Applicant s, @PathVariable Long id){
         s.setId(id);
         return applicantService.addApplicant(s);
 
     }
 
-@DeleteMapping("/{id}")
+@DeleteMapping("/applicant/{id}")
     public  void deleteMe(@PathVariable Long id){
         applicantService.deleteById(id);
 }
