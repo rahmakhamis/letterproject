@@ -1,7 +1,6 @@
 package com.example.demo.models;
 
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,19 +11,22 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "application")
-public class Application {
+@Table(name = "userrr")
+
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "application_id")
+    @Column(name ="user_id" )
     private Long id;
-    private String type;
-    private String address;
-    private String addressee;
-    private  String subject;
+    private String name;
+    private  String email;
+    private  String phoneNo;
+    private  String role;
+    private  String password;
+    private  String gender;
+    private String status;
 //    @ManyToOne
-//    private  Applicant applicant;
-    
+//    private Notification notification;
 
 
 }

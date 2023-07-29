@@ -18,7 +18,7 @@ public class Management {
     @Column(name = "management_id")
     private  Long id;
     private  String name;
-    private  String email;
+    private  String password;
     private String status;
     private  String role;
 }

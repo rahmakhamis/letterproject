@@ -18,6 +18,8 @@ public class Archives {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name ="archives_id" )
     private Long id;
+    private  String time;
+
    
 
 

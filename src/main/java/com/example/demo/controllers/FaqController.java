@@ -1,8 +1,6 @@
 package com.example.demo.controllers;
 
-import com.example.demo.models.Applicant;
 import com.example.demo.models.Faq;
-import com.example.demo.services.ApplicantServices;
 import com.example.demo.services.FaqServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
