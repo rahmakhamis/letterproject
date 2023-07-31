@@ -13,11 +13,24 @@ public class LetterServices {
     @Autowired
     private LetterRepository letterRepo;
     public Letter addLetter(Letter s) {
-        return  letterRepo. save(s);
+        return letterRepo.save(s);
+
     }
 
     public List<Letter> getAll() {
         return letterRepo.findAll();
+    }
+
+    public List<Letter> getAllByStatus(String status) {
+        return letterRepo.findLetterByStatus(status);
+    }
+
+    public List<Letter> getAllBykk(String kk) {
+        return letterRepo.findLetterByKk(kk);
+    }
+
+    public List<Letter> getAllLetterTo(String letterTo) {
+        return letterRepo.findLetterByLetterTo(letterTo);
     }
 
     public Optional<Letter> findById(Long id) {

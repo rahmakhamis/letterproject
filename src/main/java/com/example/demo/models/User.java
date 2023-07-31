@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "userrr")
+@Table(name = "users")
 
 public class User {
     @Id
@@ -25,8 +25,6 @@ public class User {
     private  String password;
     private  String gender;
     private String status;
-//    @ManyToOne
-//    private Notification notification;
 
 
 }

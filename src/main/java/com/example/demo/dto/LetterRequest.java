@@ -1,20 +1,15 @@
-package com.example.demo.models;
+package com.example.demo.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
 
-@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "letter")
-public class Letter {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "letter_id")
+public class LetterRequest {
     private  Long Id;
     private  String letterTo;
     private  String letterDoc;
@@ -22,10 +17,6 @@ public class Letter {
     private  String kk;
     private  String rejectedDocReason;
     private  String rejectedReason;
-
-    @ManyToOne
-    private  User letterFrom;
-
-    @ManyToOne
-    private  User rejectedBy;
+    private Long rejectedById;
+    private Long letterFromId;
 }
