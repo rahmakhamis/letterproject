@@ -17,6 +17,7 @@ public class Letter {
     @Column(name = "letter_id")
     private  Long Id;
     private  String letterTo;
+    @Column(columnDefinition="text", length=10485760)
     private  String letterDoc;
     private  String status;
     private  String kk;

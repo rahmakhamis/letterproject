@@ -57,6 +57,7 @@ public class LetterController {
     }
 
 //regtr --> waiting
+//    methods hii inatumika kwa kuona data ambazo zinapita tu kwake
     @GetMapping("/letter/getByStatus/{status}")
     public List<Letter> getByStatus(@PathVariable String status){
 
@@ -71,6 +72,7 @@ public class LetterController {
     }
 
     //==>vc dvc
+//     method hii ya get barua zote ambazo zinamuhusu yy
     @GetMapping("/letter/getKk/{kk}")
     public List<Letter> getKk(@PathVariable String kk){
 
