@@ -90,6 +90,9 @@ public class LetterController {
         l.setStatus("processing");
         return letterService.addLetter(l);
     }
+
+
+    //in update rejected
     @PutMapping("/letter/reject/{id}")
     public Letter updateReject(@RequestBody LetterRequest s, @PathVariable Long id){
         Letter l = letterRepository.findLetterUsingId(id);
